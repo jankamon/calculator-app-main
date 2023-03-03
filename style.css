@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+    /* Theme 1 */
+    /* Backgrounds */
+
+    --very-dark-desaturated-blue-bg: hsl(222, 26%, 31%);
+    --very-dark-desaturated-blue-kp: hsl(223, 31%, 20%);
+    --very-dark-desaturated-blue-sc: hsl(224, 36%, 15%);
+
+    /* Keys */
+    --desaturated-dark-blue: hsl(225, 21%, 49%);
+    --desaturated-dark-blue: hsl(224, 28%, 35%);
+
+    --red: hsl(6, 63%, 50%);
+    --dark-red: hsl(6, 70%, 34%);
+
+    --light-grayish-orange: hsl(30, 25%, 89%);
+    --grayish-orange: hsl(28, 16%, 65%);
+
+    /* Text */
+
+    --very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Theme 2 */
+    /* Backgrounds */
+    --light-gray: hsl(0, 0%, 90%);
+    --grayish-red: hsl(0, 5%, 81%);
+    --very-light-gray: hsl(0, 0%, 93%);
+
+    /* Keys */
+    --dark-moderate-cyan: hsl(185, 42%, 37%);
+    --very-dark-cyan: hsl(185, 58%, 25%);
+
+    --orange: hsl(25, 98%, 40%);
+    --dark-orange: hsl(25, 99%, 27%);
+
+    --light-grayish-yellow: hsl(45, 7%, 89%);
+    --dark-grayish-orange: hsl(35, 11%, 61%);
+
+    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 32px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--very-dark-desaturated-blue-bg);
+}
+
+header {
+    margin-top: 10%;
+    height: 100px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    width: 400px;
+    height: 500px;
+}
+
+.result-screen {
+    background-color: var(--very-dark-desaturated-blue-sc);
+    height: 100px;
+    width: 400px;
+    text-align: right;
+}
+
+.keypad-section {
+    background-color: var(--very-dark-desaturated-blue-kp);
+    height: 350px;
+    width: 350px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+button {
+    height: 60px;
+    width: 80px;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; margin-top: 10px;}
+.attribution a { color: hsl(228, 45%, 44%); }
