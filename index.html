@@ -13,15 +13,17 @@
   
   <title>Frontend Mentor | Calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-
-  </style>
 </head>
 <body>
   <header>
     <div class="logo"><h1>calc</h1></div>
-    <div class="theme-toggle">THEME</div>
+    <div class="theme-text">THEME</div>
+    <!-- https://webcodespace.com/how-to-create-a-three-state-toggle-switch-using-html-css-and-javascript/ -->
+    <div class="theme-toggle">
+      <input class="button" type="radio" name="toggle" id="one" />
+      <input class="button" type="radio" name="toggle" id="two" />
+      <input class="button" type="radio" name="toggle" id="three" />
+    </div>
   </header>
   <main>
     <div class="result-screen">

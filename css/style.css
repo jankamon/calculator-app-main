@@ -1,5 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
+:root {
+    /* Theme 1 */
+    /* Backgrounds */
+
+    --very-dark-desaturated-blue-bg: hsl(222, 26%, 31%);
+    --very-dark-desaturated-blue-kp: hsl(223, 31%, 20%);
+    --very-dark-desaturated-blue-sc: hsl(224, 36%, 15%);
+
+    /* Keys */
+    --desaturated-dark-blue: hsl(225, 21%, 49%);
+    --desaturated-dark-blue: hsl(224, 28%, 35%);
+
+    --red: hsl(6, 63%, 50%);
+    --dark-red: hsl(6, 70%, 34%);
+
+    --light-grayish-orange: hsl(30, 25%, 89%);
+    --grayish-orange: hsl(28, 16%, 65%);
+
+    /* Text */
+
+    --very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Theme 2 */
+    /* Backgrounds */
+    --light-gray: hsl(0, 0%, 90%);
+    --grayish-red: hsl(0, 5%, 81%);
+    --very-light-gray: hsl(0, 0%, 93%);
+
+    /* Keys */
+    --dark-moderate-cyan: hsl(185, 42%, 37%);
+    --very-dark-cyan: hsl(185, 58%, 25%);
+
+    --orange: hsl(25, 98%, 40%);
+    --dark-orange: hsl(25, 99%, 27%);
+
+    --light-grayish-yellow: hsl(45, 7%, 89%);
+    --dark-grayish-orange: hsl(35, 11%, 61%);
+
+    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+
 html {
     font-size: 32px;
     font-family: 'League Spartan', sans-serif;
@@ -12,6 +57,7 @@ body {
     align-content: center;
     justify-items: center;
     align-items: center;
+    background-color: var(--very-dark-desaturated-blue-bg);
 }
 
 header {
@@ -32,6 +78,9 @@ main {
     width: 350px;
     text-align: right;
     padding: 25px;
+    background-color: var(--very-dark-desaturated-blue-sc);
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .result-screen span {
@@ -39,27 +88,58 @@ main {
 }
 
 .keypad-section {
-    height: 350px;
+    height: 320px;
     width: 360px;
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    padding: 25px 20px 15px 20px;
-    
+    padding: 25px 16px 5px 16px;
+    background-color: var(--very-dark-desaturated-blue-kp);
+    border-radius: 10px;
 }
 
 button {
-    height: 60px;
-    width: 80px;
-    margin-left: 5px;
-    margin-right: 5px;
+    height: 46px;
+    width: 76px;
+    margin-left: 7px;
+    margin-right: 7px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+    border: none;
 }
 
 #reset, #calc {
-    height: 60px;
-    width: 170px;
-    margin-left: 5px;
-    margin-right: 5px;
+    height: 46px;
+    width: 166px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.theme-toggle input {
+    height: 15px;
+    width: 15px;
+    appearance: none;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0;
+    margin: 0px;
+}
+
+.theme-toggle input:hover {
+    cursor: pointer;
+}
+
+header .theme-toggle {
+    display: flex;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 50px;
+    padding: 0px;
+    height: 15px;
+}
+
+#one {
+    opacity: 1;
 }
 
 
