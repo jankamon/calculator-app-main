@@ -22,25 +22,6 @@
 
     --very-dark-grayish-blue: hsl(221, 14%, 31%);
     --white: hsl(0, 0%, 100%);
-
-    /* Theme 2 */
-    /* Backgrounds */
-    --light-gray: hsl(0, 0%, 90%);
-    --grayish-red: hsl(0, 5%, 81%);
-    --very-light-gray: hsl(0, 0%, 93%);
-
-    /* Keys */
-    --dark-moderate-cyan: hsl(185, 42%, 37%);
-    --very-dark-cyan: hsl(185, 58%, 25%);
-
-    --orange: hsl(25, 98%, 40%);
-    --dark-orange: hsl(25, 99%, 27%);
-
-    --light-grayish-yellow: hsl(45, 7%, 89%);
-    --dark-grayish-orange: hsl(35, 11%, 61%);
-
-    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
-    --white: hsl(0, 0%, 100%);
 }
 
 
@@ -58,6 +39,16 @@ body {
     justify-items: center;
     align-items: center;
     background-color: var(--very-dark-desaturated-blue-bg);
+}
+
+/* Body theme 2 */
+.body-t2 {
+    background-color: hsl(0, 0%, 90%);
+}
+
+/* Body theme 3 */
+.body-t3 {
+    background-color: hsl(268, 75%, 9%);
 }
 
 header {
@@ -84,6 +75,16 @@ main {
     margin-bottom: 15px;
 }
 
+/* Screen theme 2 */
+.result-screen-t2 {
+    background-color: hsl(0, 0%, 93%);
+}
+
+/* Screen theme 3 */
+.result-screen-t3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
 .result-screen span {
     font-size: 1.75rem;
     color: white;
@@ -100,23 +101,60 @@ main {
     border-radius: 10px;
 }
 
+/* Keypad theme 2 */
+.keypad-section-t2 {
+    background-color: hsl(0, 5%, 81%);
+}
+
+/* Keypad theme 3 */
+.keypad-section-t3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
 button {
     height: 46px;
     width: 76px;
     margin-left: 7px;
     margin-right: 7px;
     border-radius: 5px;
-    background-color: hsl(30, 25%, 89%);
-    box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
     border: none;
     font-size: 1rem;
     font-weight: 700;
-    color: hsl(221, 14%, 31%);
     cursor: pointer;
 }
 
-button:hover {
+.btn {
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+    color: hsl(221, 14%, 31%);
+}
+
+/* Button theme 2 */
+.btn-t2 {
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+    color: hsl(60, 10%, 19%);
+}
+
+/* Button theme 3 */
+.btn-t3 {
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+    color: hsl(52, 100%, 62%);
+}
+
+.btn:hover {
     background-color: hsl(30, 25%, 99%);
+}
+
+/* Button theme 2 */
+.btn-t2:hover {
+    background-color: hsl(185, 42%, 37%);
+}
+
+/* Button theme 3 */
+.btn-t3:hover {
+    background-color: hsl(281, 89%, 26%);
 }
 
 #reset, #calc {
