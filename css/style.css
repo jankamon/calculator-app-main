@@ -63,9 +63,10 @@ body {
 header {
     margin-top: 6%;
     height: 40px;
-    width: 400px;
+    width: 380px;
     display: flex;
     justify-content: space-between;
+    color: white;
 }
 
 main {
@@ -74,8 +75,8 @@ main {
 }
 
 .result-screen {
-    height: 25px;
-    width: 350px;
+    height: 45px;
+    width: 340px;
     text-align: right;
     padding: 25px;
     background-color: var(--very-dark-desaturated-blue-sc);
@@ -84,7 +85,8 @@ main {
 }
 
 .result-screen span {
-    margin-top: 50%;
+    font-size: 1.75rem;
+    color: white;
 }
 
 .keypad-section {
@@ -104,8 +106,17 @@ button {
     margin-left: 7px;
     margin-right: 7px;
     border-radius: 5px;
-    box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
     border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(221, 14%, 31%);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(30, 25%, 99%);
 }
 
 #reset, #calc {
@@ -119,7 +130,7 @@ button {
     height: 15px;
     width: 15px;
     appearance: none;
-    background-color: black;
+    background-color: hsl(6, 63%, 50%);
     border-radius: 50%;
     opacity: 0;
     margin: 0px;
@@ -131,17 +142,60 @@ button {
 
 header .theme-toggle {
     display: flex;
-    justify-content: center;
-    border: 3px solid black;
+    justify-content: space-between;
+    border: 5px solid var(--very-dark-desaturated-blue-kp);
+    background-color: var(--very-dark-desaturated-blue-kp);
     border-radius: 50px;
     padding: 0px;
     height: 15px;
+    width: 55px;
+    
 }
 
 #one {
     opacity: 1;
 }
 
+.del-reset {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+    font-size: 0.75rem;
+    color: white;
+}
+
+#calc {
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+    font-size: 0.75rem;
+    color: white;
+}
+
+.del-reset:hover {
+    background-color: hsl(225, 21%, 59%);
+}
+
+#calc:hover {
+    background-color: hsl(6, 63%, 60%);
+}
+
+.theme-section {
+    display: flex;
+    font-size: 0.35rem;
+    align-items: center;
+}
+
+.theme-section span {
+    margin-right: 15px;
+    letter-spacing: 1px;
+}
+
+.theme-num {
+    position: relative;
+    bottom: 5px;
+    left: 197px;
+    letter-spacing: 15px;
+    font-size: 0.35rem;
+}
 
 .attribution { font-size: 11px; text-align: center; margin-top: 10px;}
 .attribution a { color: hsl(228, 45%, 44%); }

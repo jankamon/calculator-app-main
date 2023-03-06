@@ -17,12 +17,16 @@
 <body>
   <header>
     <div class="logo"><h1>calc</h1></div>
-    <div class="theme-text">THEME</div>
+    <span class="theme-num">123</span>
+    <div class="theme-section">
+      <span>THEME</span>
+      
     <!-- https://webcodespace.com/how-to-create-a-three-state-toggle-switch-using-html-css-and-javascript/ -->
-    <div class="theme-toggle">
-      <input class="button" type="radio" name="toggle" id="one" />
-      <input class="button" type="radio" name="toggle" id="two" />
-      <input class="button" type="radio" name="toggle" id="three" />
+      <div class="theme-toggle">
+        <input class="button" type="radio" name="toggle" id="one" />
+        <input class="button" type="radio" name="toggle" id="two" />
+        <input class="button" type="radio" name="toggle" id="three" />
+      </div>
     </div>
   </header>
   <main>
@@ -33,7 +37,7 @@
       <button type="button">7</button>
       <button type="button">8</button>
       <button type="button">9</button>
-      <button type="button">DEL</button>
+      <button class="del-reset" type="button">DEL</button>
       <button type="button">4</button>
       <button type="button">5</button>
       <button type="button">6</button>
@@ -46,7 +50,7 @@
       <button type="button">0</button>
       <button type="button">/</button>
       <button type="button">x</button>
-      <button id="reset" type="button">RESET</button>
+      <button id="reset" class="del-reset" type="button">RESET</button>
       <button id="calc" type="button">=</button>
 
     </div>
