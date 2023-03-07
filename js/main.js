@@ -9,7 +9,7 @@ const numberButtons = document.getElementsByClassName('num-btn');
 const operationButtons = document.getElementsByClassName('sign-btn');
 
 let operationSet = false;
-let firstNumber = false;
+let firstInput = true;
 let placeholder = 0;
 
 resultScreen.innerHTML = placeholder;
@@ -18,27 +18,34 @@ resultScreen.innerHTML = placeholder;
 // Functions
 const setOperation = (element) => {
     console.log('Clicked set operation button');
-    if(firstNumber) {
-        resultScreen.innerHTML += element.value;
-        operationSet = true;
+    if(!firstInput && resultScreen.innerHTML !== '') {
+        if(resultScreen.innerHTML.slice(-1) !== '*' && resultScreen.innerHTML.slice(-1) !== '/' && resultScreen.innerHTML.slice(-1) !== '+' && resultScreen.innerHTML.slice(-1) !== '-') {
+            console.log('First if is working');
+            resultScreen.innerHTML += element.value;
+            operationSet = true; 
+        }
     }
 }
 
 const deletePlaceholder = () => {
-    if(!firstNumber) {
-        resultScreen.innerHTML = resultScreen.innerHTML.substring(1);
-    }
+    resultScreen.innerHTML = resultScreen.innerHTML.substring(1);
+}
+
+const addNumber = (element) => {
+    console.log('Clicked number button');
+    if(firstInput) {
+        deletePlaceholder();
+        firstInput = false;
+    };
+
+    resultScreen.innerHTML += element.value;
 }
 
 
 // Event listeners
 [...numberButtons].forEach(element => {
     element.addEventListener('click', () => {
-            console.log('Clicked number button');
-            deletePlaceholder();
-            firstNumber = true;
-            resultScreen.innerHTML += element.value;
-            
+        addNumber(element);            
     });
 });
 
@@ -58,9 +65,9 @@ deleteButton.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
     console.log('Clicked reset button');
     resultScreen.innerHTML = 0;
+    firstInput = true;
 })
 
 
 //  Todo:
 // block adding 0 at beggining
-// block multiplying operators
