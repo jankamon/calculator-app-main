@@ -10,7 +10,6 @@ const numberButtons = document.getElementsByClassName('num-btn');
 const operationButtons = document.getElementsByClassName('sign-btn');
 
 let firstInput = true;
-let lastInputIsCorrect = false; 
 let placeholder = 0;
 
 resultScreen.innerHTML = placeholder;
