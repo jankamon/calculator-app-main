@@ -5,11 +5,12 @@ import "./theme.js";
 const resultScreen = document.getElementById('result');
 const deleteButton = document.getElementById('del-btn');
 const resetButton = document.getElementById('reset');
+const countButton = document.getElementById('calc');
 const numberButtons = document.getElementsByClassName('num-btn');
 const operationButtons = document.getElementsByClassName('sign-btn');
 
-let operationSet = false;
 let firstInput = true;
+let lastInputIsCorrect = false; 
 let placeholder = 0;
 
 resultScreen.innerHTML = placeholder;
@@ -22,7 +23,6 @@ const setOperation = (element) => {
         if(resultScreen.innerHTML.slice(-1) !== '*' && resultScreen.innerHTML.slice(-1) !== '/' && resultScreen.innerHTML.slice(-1) !== '+' && resultScreen.innerHTML.slice(-1) !== '-') {
             console.log('First if is working');
             resultScreen.innerHTML += element.value;
-            operationSet = true; 
         }
     }
 }
@@ -70,4 +70,10 @@ resetButton.addEventListener('click', () => {
     console.log('Clicked reset button');
     resultScreen.innerHTML = 0;
     firstInput = true;
+})
+
+// Count
+countButton.addEventListener('click', () => {
+    console.log('Clicked count button');
+    resultScreen.innerHTML = eval(resultScreen.innerHTML);    
 })
