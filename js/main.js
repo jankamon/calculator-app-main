@@ -17,31 +17,43 @@ resultScreen.innerHTML = placeholder;
 
 
 // Functions
+// Checking if last screen result element is operation symbol
+const checkLastSymbol = () => {
+    if(resultScreen.innerHTML.slice(-1) !== '*' && resultScreen.innerHTML.slice(-1) !== '/' && resultScreen.innerHTML.slice(-1) !== '+' && resultScreen.innerHTML.slice(-1) !== '-') {
+        return true;
+    } else { return false;};
+
+}
+
+// Adding operation symbol to screen
 const setOperation = (element) => {
     console.log('Clicked set operation button');
-    if(!firstInput && resultScreen.innerHTML !== '') {
-        if(resultScreen.innerHTML.slice(-1) !== '*' && resultScreen.innerHTML.slice(-1) !== '/' && resultScreen.innerHTML.slice(-1) !== '+' && resultScreen.innerHTML.slice(-1) !== '-') {
-            console.log('First if is working');
-            resultScreen.innerHTML += element.value;
-        }
+    if(!firstInput && resultScreen.innerHTML !== '' && checkLastSymbol()) {
+        console.log('First if is working');
+        resultScreen.innerHTML += element.value;
     }
 }
 
+// Deleting first 0
 const deletePlaceholder = () => {
     resultScreen.innerHTML = resultScreen.innerHTML.substring(1);
 }
 
+
+// Adding number to screen
 const addNumber = (element) => {
     console.log('Clicked number button ' + element.value);
 
-    if(firstInput && element.value != 0) {
+    if(firstInput && element.value !== '0') {
         console.log('First input if working ' + firstInput + element.value);
         deletePlaceholder();
         firstInput = false;
         console.log('After firstInput ' + firstInput + element.value);
     };
 
-    if(!firstInput) {resultScreen.innerHTML += element.value;};
+    if(!firstInput) {
+        resultScreen.innerHTML += element.value;
+    };
     
 }
 
@@ -75,5 +87,7 @@ resetButton.addEventListener('click', () => {
 // Count
 countButton.addEventListener('click', () => {
     console.log('Clicked count button');
-    resultScreen.innerHTML = eval(resultScreen.innerHTML);    
+    if(checkLastSymbol()) {
+        resultScreen.innerHTML = eval(resultScreen.innerHTML);  
+    }
 })
