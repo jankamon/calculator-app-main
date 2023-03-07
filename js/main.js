@@ -32,13 +32,17 @@ const deletePlaceholder = () => {
 }
 
 const addNumber = (element) => {
-    console.log('Clicked number button');
-    if(firstInput) {
+    console.log('Clicked number button ' + element.value);
+
+    if(firstInput && element.value != 0) {
+        console.log('First input if working ' + firstInput + element.value);
         deletePlaceholder();
         firstInput = false;
+        console.log('After firstInput ' + firstInput + element.value);
     };
 
-    resultScreen.innerHTML += element.value;
+    if(!firstInput) {resultScreen.innerHTML += element.value;};
+    
 }
 
 
@@ -67,7 +71,3 @@ resetButton.addEventListener('click', () => {
     resultScreen.innerHTML = 0;
     firstInput = true;
 })
-
-
-//  Todo:
-// block adding 0 at beggining
