@@ -73,6 +73,8 @@ main {
     background-color: var(--very-dark-desaturated-blue-sc);
     border-radius: 10px;
     margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 /* Screen theme 2 */
@@ -89,6 +91,7 @@ main {
     font-size: 1.75rem;
     color: white;
 }
+
 
 .keypad-section {
     height: 320px;
@@ -237,10 +240,6 @@ header .theme-toggle {
 
 label {
     padding-bottom: 50px;
-}
-
-.theme1 {
-
 }
 
 .attribution { font-size: 11px; text-align: center; margin-top: 10px;}

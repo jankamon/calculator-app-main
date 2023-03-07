@@ -13,7 +13,7 @@ themeArr.forEach((element, index) => {
             
     } else if (index == 1) {
         // Backgrounds
-        document.body.style.backgroundColor = 'hsl(0, 0%, 90%)';
+        // document.body.style.backgroundColor = 'hsl(0, 0%, 90%)';
     } else {
             
     }
