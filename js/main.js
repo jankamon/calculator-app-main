@@ -18,9 +18,11 @@ resultScreen.innerHTML = placeholder;
 // Functions
 // Checking if last screen result element is operation symbol
 const checkLastSymbol = () => {
-    if(resultScreen.innerHTML.slice(-1) !== '*' && resultScreen.innerHTML.slice(-1) !== '/' && resultScreen.innerHTML.slice(-1) !== '+' && resultScreen.innerHTML.slice(-1) !== '-') {
+    if(['*','/','+','-'].includes(resultScreen.innerHTML.slice(-1))) {
+        return false;
+    } else { 
         return true;
-    } else { return false;};
+    };
 
 }
 
