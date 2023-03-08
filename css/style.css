@@ -126,27 +126,27 @@ button {
     cursor: pointer;
 }
 
-.btn {
+.num-btn, .sign-btn {
     background-color: hsl(30, 25%, 89%);
     box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
     color: hsl(221, 14%, 31%);
 }
 
 /* Button theme 2 */
-.btn-t2 {
+.num-btn-t2 {
     background-color: hsl(45, 7%, 89%);
     box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
     color: hsl(60, 10%, 19%);
 }
 
 /* Button theme 3 */
-.btn-t3 {
+.num-btn-t3 {
     background-color: hsl(268, 47%, 21%);
     box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
     color: hsl(52, 100%, 62%);
 }
 
-.btn:hover {
+.num-btn:hover, .sign-btn:hover {
     background-color: hsl(30, 25%, 99%);
 }
 
