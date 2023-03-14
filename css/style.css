@@ -99,9 +99,10 @@ main {
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    padding: 25px 16px 5px 16px;
+    padding: 16px;
     background-color: var(--very-dark-desaturated-blue-kp);
     border-radius: 10px;
+    gap: 0.5rem;
 }
 
 /* Keypad theme 2 */
@@ -117,8 +118,6 @@ main {
 button {
     height: 46px;
     width: 76px;
-    margin-left: 7px;
-    margin-right: 7px;
     border-radius: 5px;
     border: none;
     font-size: 1rem;
@@ -163,8 +162,6 @@ button {
 #reset, #calc {
     height: 46px;
     width: 166px;
-    margin-left: 7px;
-    margin-right: 7px;
 }
 
 .theme-toggle input {
